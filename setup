@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+target_dir="$HOME/.local/bin"
+
+if [ ! -d $target_dir ]; then
+	mkdir -p $target_dir
+fi
+
+for cm in git-*; do
+	ln -sf "$PWD/$cm" "$target_dir/$cm" && echo "Installed $cm"
+done

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+cb=$(git branch --show-current)
+if [[ "$cb" != "master" && "$cb" != "develop" ]]; then
+	echo 'You must checkout to master or develop' && exit 1
+fi
+
+for b in $(git branch | grep -vE 'develop|master'); do
+	git branch -D $b
+done
