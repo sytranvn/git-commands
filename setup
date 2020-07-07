@@ -6,5 +6,6 @@ if [ ! -d $target_dir ]; then
 fi
 
 for cm in git-*; do
+	chmod +x $cm
 	ln -sf "$PWD/$cm" "$target_dir/$cm" && echo "Installed $cm"
 done
