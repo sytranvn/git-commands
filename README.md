@@ -1,3 +1,5 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/sytranvn/git-commands) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sytranvn/git-commands/CI)
+
 # Install 
 
 ```sh
