@@ -2,6 +2,7 @@
 
 set -e
 
-repo=$(basename $(git remote get-url origin))
+repo=$(git remote get-url origin)
+repo=${repo##*:}
 repo=${repo%.git}
 echo $repo
