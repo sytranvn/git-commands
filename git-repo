@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+
+repo=$(basename $(git remote get-url origin))
+repo=${repo%.git}
+echo $repo
