@@ -2,7 +2,7 @@
 
 set -e
 
-pr=$(hub pr show -f %i)
+pr=$(hub pr show -f %I)
 repo=$(hub repo)
 message=$1
-hub api "repos/$repo/issues/$pr/comments" -X POST --raw-field "body=$message"
+hub api "repos/$repo/issues/$pr/comments" -X POST --raw-field "body=$message" > /dev/null 2>&1
